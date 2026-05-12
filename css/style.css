@@ -1264,12 +1264,19 @@ img {
     color: var(--bg-white);
 }
 
+
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
 
+.products-grid .euro-style-header,
+.products-grid .closets-header {
+    display: none;
+    grid-column: 1 / -1;
+    margin: 8px 0 24px;
+}
 .product-card {
     background: var(--bg-white);
     border-radius: 20px;
@@ -3469,3 +3476,7 @@ body {
         transition: none;
     }
 }
+
+
+
+

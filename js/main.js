@@ -117,6 +117,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function applyFilter(filter) {
+        const euroStyleHeaders = document.querySelectorAll('.euro-style-header');
+        euroStyleHeaders.forEach(header => {
+            header.style.display = filter === 'flatpanel' ? 'block' : 'none';
+        });
+
+        const closetsHeaders = document.querySelectorAll('.closets-header');
+        closetsHeaders.forEach(header => {
+            header.style.display = filter === 'closets' ? 'block' : 'none';
+        });
+
         productCards.forEach(card => {
             if (filter === 'all') {
                 card.classList.toggle('hidden', card.dataset.category === 'accessories');
@@ -462,3 +472,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', animateOnScroll);
     animateOnScroll();
 });
+
+
+
+
